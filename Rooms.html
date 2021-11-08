@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hostel and rental Booking</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Hostel and Rental Booking</span>
+                </a>
+
+            </li>
+
+
+            <li>
+                <a href="/index.html">
+                    <span class="icon">
+                        <ion-icon name="planet-outline"></ion-icon>
+                    </span>
+                    <span class="title">Dashboard</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">Rooms</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/Landlords.html">
+                    <span class="icon">
+                        <ion-icon name="person-remove-outline"></ion-icon>
+                    </span>
+                    <span class="title">Landlords</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/Residential.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Houses and Rentals</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/statistics.html">
+                    <span class="icon">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                    </span>
+                    <span class="title">Statistics</span>
+                </a>
+
+            </li>
+
+
+
+        </ul>
+
+    </div>
+    <!-- main -->
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <!-- search -->
+
+        </div>
+
+        <!-- cards -->
+
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">800 </div>
+                    <div class="cardName">Total Number of Single Bedsitters</div>
+
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">80 </div>
+                    <div class="cardName">Total Number of Shared bedsitters</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">150 </div>
+                    <div class="cardName">Total Number of Two bedroomed Houses</div>
+
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100 </div>
+                    <div class="cardName">Total Number of Three bedroomed Houses</div>
+
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="d-flex flex-row justify-content-between pb-3">
+
+                <button type="button" class="btn btn-outline-success" id="button" data-toggle="modal"
+                    data-target="#exampleModal"><span class="oi oi-plus pr-2"></span>Click to Add Rooms</button>
+            </div>
+
+
+
+            <!-- New Sale Entry -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">NEW SALE</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="HouseID"><small class="text-muted">Hostel Or Rental</small></label>
+                                    <input type="text" class="form-control" id="HouseId" aria-describedby="emailHelp"
+                                        placeholder="Enter Name of Residence">
+                                </div>
+
+                                <div class="form-group" id="House-Type">
+                                    <label for="exampleInputEmail1"><small class="text-muted">Room-type
+                                            Available</small></label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="hiking" value="option1">
+                                        <label class="form-check-label" for="Bedsitter">Bedsitter</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="running" value="option2">
+                                        <label class="form-check-label" for="One bedroom">One bedroom</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="hunting" value="option3">
+                                        <label class="form-check-label" for="Two bedroom">Two bedroom</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="hunting" value="option3">
+                                        <label class="form-check-label" for="Two bedroom">Three bedroom</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="RentAmount"><small class="text-muted">Rent Amount:</small></label>
+                                    <input type="number" class="form-control" id="RentAmount"
+                                        aria-describedby="emailHelp" placeholder="Enter amount">
+                                </div>
+                                <div class="form-group">
+                                    <label for="DepositAmount"><small class="text-muted">Deposit Amount:</small></label>
+                                    <input type="number" class="form-control" id="DepositAmount"
+                                        aria-describedby="emailHelp" placeholder="Enter amount">
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="Featured" name="Featured" value="Featured">
+                                    <label for="Featured"> Featured</label><br>
+                                    <input type="checkbox" id="Display" name="Display" value="Display">
+                                    <label for="Display"> Display</label><br>
+                                </div>
+
+                                <form action="/action_page.php">
+                                    <label for="img">Select image:</label>
+                                    <input type="file" id="img" name="img" accept="image/*" multiple>
+                                    <input type="submit">
+                                  </form>
+
+
+                            </form>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="Addrow()">Add
+                                Sale</button>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="Container">
+                <div class="table" width="100">
+                    <table id="show">
+                        <tr>
+                            <th>RESIDENTIAL NAME</th>
+                            <th>ROOM TYPE</th>
+                            <th>PRICE</th>
+                            <th>DEPOSIT</th>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var list1 = [];
+        var list2 = [];
+        var list3 = [];
+        var list4 = [];
+        var n = 1;
+        var x = 0;
+
+
+        function Addrow() {
+            var AddRown = document.getElementById('show');
+            var NewRow = AddRown.insertRow(n);
+            list1[x] = document.getElementById('HouseId').value;
+            list2[x] = document.getElementById('House-Type').value;
+            list3[x] = document.getElementById('RentAmount').value;
+            list4[x] = document.getElementById('DepositAmount').value;
+
+            var cel1 = NewRow.insertCell(0)
+            var cel2 = NewRow.insertCell(1)
+            var cel3 = NewRow.insertCell(2)
+            var cel4 = NewRow.insertCell(3)
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+
+            n++;
+            x++;
+        }
+    </script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+
+<script src="/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hostel and rental Booking</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Hostel and Rental Booking</span>
+                </a>
+
+            </li>
+
+
+            <li>
+                <a href="/index.html">
+                    <span class="icon">
+                        <ion-icon name="planet-outline"></ion-icon>
+                    </span>
+                    <span class="title">Dashboard</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="/Rooms.html">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">Rooms</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/Landlords.html">
+                    <span class="icon">
+                        <ion-icon name="person-remove-outline"></ion-icon>
+                    </span>
+                    <span class="title">Landlords</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/Residential.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Houses and Rentals</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="/statistics.html">
+                    <span class="icon">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                    </span>
+                    <span class="title">Statistics</span>
+                </a>
+
+            </li>
+
+
+
+        </ul>
+    </div>
+
+
+
+    <!-- main -->
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <!-- search -->
+
+        </div>
+
+        <!-- cards -->
+
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">15000 </div>
+                    <div class="cardName">Gross Income</div>
+
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="cash-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">80 </div>
+                    <div class="cardName">Number of Clients</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div>
+                    <div class="numbers">150 </div>
+                    <div class="cardName">Number of houses Vacant</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">150 </div>
+                    <div class="cardName">Comments</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Graph -->
+        <div class="container">
+            <div class="d-flex flex-row pb-2">
+                <h3>Sales Tracker</h3>
+            </div>
+
+            <!-- Yearly Number -->
+            <div class="row">
+                <div class="col-12 w-100">
+                    <div class="graphSec">
+                        <h4 class="text-center pt-3">Yearly Revenue</h4>
+                        <h1 class="text-center pb-3 totalNum" id="yearlyTotal"></h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="row mt-3 mb-3">
+                <div class="col-12 col-md-6 w-100 mb-4 mb-md-0">
+                    <div class="graphSec px-2">
+                        <h4 class="text-center py-3">Monthly Sales</h4>
+                        <canvas id="monthlySales" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 w-100">
+                    <div class="graphSec px-2">
+                        <h4 class="text-center py-3">Department Sales</h4>
+                        <canvas id="deptSales" class="pb-2" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="container py-3">
+            <div class="d-flex flex-row justify-content-between pb-3">
+                <button type="button" class="btn btn-outline-primary" onclick="findSale()"><span
+                        class="oi oi-magnifying-glass pr-2"></span>Find Sale</button>
+    
+            </div>
+        </div>
+
+        <!-- Recent Sales -->
+        <div class="container py-3">
+            <div class="d-flex flex-row justify-content-between pb-3">
+                <h3>Recent Sales</h3>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal"
+                    data-target="#exampleModal"><span class="oi oi-plus pr-2"></span>Add Sale</button>
+            </div>
+
+            <!-- New Sales View -->
+            <div class="row newSalesArea mb-3">
+                <div class="col p-0">
+                    <div class="list-group" id="productSales">
+                        <!-- Product Sales -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Sale Entry -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">NEW SALE</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="monthId"><small class="text-muted">Month:</small></label>
+                                    <input type="month" class="form-control" id="monthId" aria-describedby="emailHelp"
+                                        placeholder="Enter month">
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemAmount"><small class="text-muted">Item Amount:</small></label>
+                                    <input type="number" class="form-control" id="itemAmount"
+                                        aria-describedby="emailHelp" placeholder="Enter amount">
+                                </div>
+                               
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addSale()">Add
+                                Sale</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+
+<script src="/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</html>
